@@ -7,24 +7,31 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(
             child: Column(
               children: [
-                SizedBox(height: 50),
+                SizedBox(height: 40),
 
                 // buat yang liat, ini tuh yang awal atas login sama welcome back *Rizki
-                Text(
-                  "Login",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Hey, welcome back!",
-                  style: TextStyle(fontSize: 20),
+                Center(
+                  child: Image.asset("lib/images/logovts.png",
+                      height: 50, width: 50),
                 ),
 
-                SizedBox(height: 50),
+                SizedBox(height: 40),
+
+                Text(
+                  "Sign in",
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+
+                SizedBox(height: 40),
 
                 // kalo ini buat tempat username *Rizki
                 Padding(
@@ -33,17 +40,18 @@ class LoginPage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: "Username",
                       filled: true,
-                      fillColor: Colors.transparent,
+                      fillColor: Colors.grey[100],
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(10)),
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey)),
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15)),
                     ),
                   ),
                 ),
 
-                SizedBox(height: 14),
+                SizedBox(height: 25),
 
                 // ini buat tempat password, dibuat hide supaya keliatan lebih secure aja sih *Rizki
                 Padding(
@@ -53,17 +61,18 @@ class LoginPage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: "Password",
                       filled: true,
-                      fillColor: Colors.transparent,
+                      fillColor: Colors.grey[100],
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(10)),
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey)),
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15)),
                     ),
                   ),
                 ),
 
-                SizedBox(height: 50),
+                SizedBox(height: 40),
 
                 // kalo ini buat tombol sign in, entar gua bikin supaya kalo dipencet entar ke homepage *Rizki
                 GestureDetector(
@@ -73,7 +82,7 @@ class LoginPage extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 25),
                     decoration: BoxDecoration(
                         color: Color(0xFF0166FF),
-                        borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Center(
                       child: Text("Sign in",
                           style: TextStyle(
@@ -107,7 +116,7 @@ class LoginPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset(
-                              "lib/images/google.png",
+                              "lib/images/g-logo.png",
                               height: 24,
                               width: 24,
                             ),
