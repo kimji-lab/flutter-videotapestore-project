@@ -7,6 +7,10 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Sign in"),
+        backgroundColor: Colors.white,
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -24,12 +28,16 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 40),
 
                 Text(
-                  "Sign in",
+                  "Welcome back",
                   style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
+                SizedBox(height: 5),
+
+                Text('Please enter your details',
+                    style: TextStyle(fontSize: 12, color: Colors.black)),
 
                 SizedBox(height: 40),
 
@@ -92,7 +100,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 30),
+                SizedBox(height: 40),
 
                 Text("Or Continue With"),
 
