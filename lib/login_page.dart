@@ -1,11 +1,14 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'signup_page.dart';
+import 'package:flutter_sign_page/signup_page.dart';
+import 'package:http/http.dart' as http;
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Sign in"),
@@ -18,15 +21,11 @@ class LoginPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 40),
-
-                // buat yang liat, ini tuh yang awal atas login sama welcome back *Rizki
                 Center(
                   child: Image.asset("lib/images/logovts.png",
                       height: 50, width: 50),
                 ),
-
                 SizedBox(height: 40),
-
                 Text(
                   "Welcome back",
                   style: TextStyle(
@@ -35,13 +34,9 @@ class LoginPage extends StatelessWidget {
                       color: Colors.black),
                 ),
                 SizedBox(height: 5),
-
                 Text('Please enter your details',
                     style: TextStyle(fontSize: 12, color: Colors.black)),
-
                 SizedBox(height: 40),
-
-                // kalo ini buat tempat username *Rizki
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 25),
                   child: TextField(
@@ -58,10 +53,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 SizedBox(height: 25),
-
-                // ini buat tempat password, dibuat hide supaya keliatan lebih secure aja sih *Rizki
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 25),
                   child: TextField(
@@ -79,12 +71,8 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 SizedBox(height: 40),
-
-                // kalo ini buat tombol sign in, entar gua bikin supaya kalo dipencet entar ke homepage *Rizki
                 GestureDetector(
-                  onTap: () {},
                   child: Container(
                     padding: EdgeInsets.all(15),
                     margin: EdgeInsets.symmetric(horizontal: 25),
@@ -99,53 +87,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 SizedBox(height: 40),
-
-                Text("Or Continue With"),
-
-                SizedBox(height: 30),
-
-                // ini gambar yang buat extra auth google, gua niatnya cmn mau bikin 1 keliatannya susah *Rizki (belum selesai
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        width: 150,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300),
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.white,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              "lib/images/g-logo.png",
-                              height: 24,
-                              width: 24,
-                            ),
-                            SizedBox(width: 8),
-                            Text(
-                              'Google',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-
-                SizedBox(height: 40),
-
-                // ini text yang paling bawah *Rizki
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
